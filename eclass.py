@@ -82,10 +82,10 @@ def telegram_notification(msg):
     你好,本週有的功課為 : 
     
     """
-    server = smtplib.SMTP('eagle.mxlogin.com', 587)
+    server = smtplib.SMTP('MAIL_SERVER', 587)
     server.starttls()
-    server.login("alert-error@kaikaisd.link", "fasoi")
-    server.sendmail("alert-error@kaikaisd.link", "m_sv@kaikaisd.link", patt)
+    server.login("SENDER_MAIL", "PASSWORD")
+    server.sendmail("SENDER_MAIL", "RECIEVER_MAIL", patt)
     server.quit()
 
 # ---- EOF function ----
@@ -101,6 +101,8 @@ print("""
 |          此程式並不能免去你再次登入的歩驟        |
 |             請配合使用瀏覽器外掛腳本            |
 =================================================
+
+外掛腳本 : https://gist.github.com/kaikaisd/1853f5c826993966051627174beb8874
 """+"\n")
 
 #inputs
